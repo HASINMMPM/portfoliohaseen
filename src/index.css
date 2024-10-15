@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 /* heading */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 /* second */
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* third */
-@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lustria&display=swap");
 
+.btn {
+  @apply bg-white hover:bg-black duration-300 hover:p-1 rounded-lg hover:text-white;
+}
+.section{
+  @apply py-12 flex flex-col items-center justify-center  text-black
+}
 html {
   scroll-behavior: smooth;
 }
@@ -18,27 +24,158 @@ html {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-
 }
 .blend-animation {
-    background: linear-gradient(-45deg, #f379c6, #6ed85d, #65cdf3, #efe947);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: gradient 15s ease infinite;
-    background-size: 300%;
-    
+  background: linear-gradient(-45deg, #f379c6, #6ed85d, #65cdf3, #efe947);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient 15s ease infinite;
+  background-size: 300%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  50% {
+    background-position: 100% 50%;
   }
-  
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.arrow {
+  visibility: hidden;
+  animation: animation 2s ease-out infinite;
+}
+.explore:hover .arrow {
+  visibility: visible;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* .singlebg {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1103%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1104%26quot%3b)'%3e%3c/rect%3e%3cpath d='M109 426L369 686' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M903 402L1063 562' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M150 467L-234 83' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M1350 402L1089 141' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M315 277L123 85' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M1377 182L1152 -43' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M550 150L820 420' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M991 398L1269 676' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M860 187L1257 584' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M964 337L1132 505' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M47 311L-149 115' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M352 423L-61 10' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M1172 78L1573 479' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M640 493L462 315' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M336 187L722 573' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M71 139L-174 -106' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M819 19L1060 260' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M114 476L-179 183' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M1037 473L822 258' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M915 106L743 -66' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M548 258L233 -57' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M1277 317L1091 131' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M928 304L693 69' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M1121 527L806 212' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M1244 426L1528 710' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M1352 186L1555 389' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M463 200L86 -177' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M483 142L748 407' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M257 328L53 124' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M736 263L342 -131' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M671 465L866 660' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M1060 105L855 -100' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M1001 169L1153 321' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M886 508L522 144' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M937 289L642 -6' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M377 369L118 110' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M988 85L705 -198' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M324 394L-29 41' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1106%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M762 118L447 -197' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1105%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1103'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1104'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(3%2c 23%2c 50%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='0%25' y1='0%25' x2='100%25' y2='100%25' id='SvgjsLinearGradient1105'%3e%3cstop stop-color='rgba(28%2c 83%2c 142%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='%231c538e' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1106'%3e%3cstop stop-color='rgba(28%2c 83%2c 142%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='%231c538e' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+} */
+
+.slide-in-top {
+	-webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2024-10-11 22:57:41
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-top
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animatediv {
+
+  overflow: auto;
+  background: linear-gradient(315deg, rgb(135, 206, 250) 3%, rgb(204, 255, 229) 38%, rgb(230, 230, 250) 68%, rgb(255, 182, 193) 98%);
+  animation: gradient 20s ease infinite;
+  background-size: 400% 100%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+      transform: translateX(1);
+  }
+
+  25% {
+      transform: translateX(-25%);
+  }
+
+  50% {
+      transform: translateX(-50%);
+  }
+
+  75% {
+      transform: translateX(-25%);
+  }
+
+  100% {
+      transform: translateX(1);
+  }
+}

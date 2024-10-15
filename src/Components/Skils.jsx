@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const Skils = () => {
+  const [showSkill,setShowSkill]=useState(false)
   return (
-    <section id="skills">
+    <section id="skills" className="section">
+      <h2 className="text-4xl font-bold mb-8">Skills</h2>
 
-    <div className='h-screen bg-rose-400'>Skils</div>
     </section>
-  )
-}
+  );
+};
 
-export default Skils
+export default Skils;

@@ -1,10 +1,11 @@
 import React from 'react';
+import { FaFileDownload } from "react-icons/fa";
 
 const Resume = () => {
-  const resumeUrl = '/50-07.pdf'; 
+  const resumeUrl = '/resume.pdf'; 
 
   return (
-    <section id="resume" className=" py-12 flex flex-col items-center justify-center bg-blue-600 text-white">
+    <section id="resume" className=" section">
       <h2 className="text-4xl font-bold mb-8">My Resume</h2>
 
       <div className="flex gap-4">
@@ -13,18 +14,18 @@ const Resume = () => {
           href={resumeUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white text-blue-600 px-6 py-2 rounded-lg hover:bg-gray-100 transition duration-300"
+          className="btn px-6 py-2 hover:px-8 hover:translate-y-2"
         >
-          View in New Tab
+          View
         </a>
 
         {/* Button to download the resume */}
         <a
           href={resumeUrl}
           download="Muhammad_Haseen_Resume.pdf"
-          className="bg-white text-blue-600 px-6 py-2 rounded-lg hover:bg-gray-100 transition duration-300"
+          className="btn px-6 py-2 hover:px-8 hover:translate-y-[-0.5rem] flex items-center gap-2"
         >
-          Download Resume
+          Download <FaFileDownload/>
         </a>
       </div>
     </section>
