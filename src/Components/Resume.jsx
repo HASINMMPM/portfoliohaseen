@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFileDownload } from "react-icons/fa";
+import { IoIosDocument } from "react-icons/io";
 
 const Resume = () => {
   const resumeUrl = '/resume.pdf'; 
@@ -14,18 +15,18 @@ const Resume = () => {
           href={resumeUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn px-6 py-2 hover:px-8 hover:translate-y-2"
+          className="show-view btn px-6 py-2 hover:px-8 hover:translate-y-2 flex items-center gap-2"
         >
-          View
+          View <span className='show-file'><IoIosDocument/></span>
         </a>
 
         {/* Button to download the resume */}
         <a
           href={resumeUrl}
           download="Muhammad_Haseen_Resume.pdf"
-          className="btn px-6 py-2 hover:px-8 hover:translate-y-[-0.5rem] flex items-center gap-2"
+          className="show-down btn px-6 py-2 hover:px-8 hover:translate-y-[-0.5rem] flex items-center gap-2"
         >
-          Download <FaFileDownload/>
+          Download <div className="show"> <FaFileDownload/></div>
         </a>
       </div>
     </section>

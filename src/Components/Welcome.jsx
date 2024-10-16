@@ -21,7 +21,7 @@ const Welcome = () => {
         />
         {/* type */}
         <div className="flex flex-col gap-14">
-          <div className="flex flex-col blend-animation  justify-center slide-in-top">
+          <div className="flex flex-col text-white  justify-center slide-in-top">
             <h1 className="font-heading text-6xl md:text-8xl">Hello;</h1>
             <h2 className="text-2xl md:text-4xl font-second">
               I'm Muhammad Haseen NM.
