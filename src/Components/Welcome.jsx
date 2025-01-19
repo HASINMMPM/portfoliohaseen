@@ -21,7 +21,7 @@ const Welcome = () => {
         />
         {/* type */}
         <div className="flex flex-col gap-14">
-          <div className="flex flex-col text-white  justify-center slide-in-top">
+          <div className="flex flex-col text-white  justify-center mx-auto slide-in-top">
             <h1 className="font-heading text-6xl md:text-8xl">Hello;</h1>
             <h2 className="text-2xl md:text-4xl font-second">
               I'm Muhammad Haseen NM.
@@ -32,7 +32,7 @@ const Welcome = () => {
             </h3>
             {/* indication */}
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 items-center  ">
+          <div className="grid grid-cols-2 md:grid-cols-4  gap-2 place-items-center">
             {navlinks.map((link, index) => (
               <a
                 href={link.link}

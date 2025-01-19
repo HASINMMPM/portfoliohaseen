@@ -6,21 +6,19 @@ const techSkill = [
   "JavaScript",
   "HTML",
   "CSS",
-  "Redux",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
   "Tailwind CSS",
   "Bootstrap",
   "Material-UI",
+  "Responsive Web Design",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
   "AWS",
-  "Photoshop",
   "Mongoose",
   "JWT",
-  "Responsive Web Design",
   "RESTful API",
   "git",
-  "React Hooks",
+  "Photoshop",
 ];
 
 const softSkill = [
@@ -30,13 +28,10 @@ const softSkill = [
   "Problem-Solving",
   "Adaptability",
   "Time Management",
-  "Attention to Detail",
   "Critical Thinking",
-  "Creativity",
   "Collaboration",
   "Empathy",
   "Self-Motivation",
-  "Accountability",
   "Open to Feedback",
   "Stress Management",
   "Decision-Making",
@@ -54,7 +49,7 @@ const Skils = () => {
   };
   return (
     <section id="skills" className="section ">
-      <h2 className="text-4xl font-bold mb-8">Skills</h2>
+      <h2 className="heading">Skills</h2>
       <div
         className="flex flex-row justify-between items-center w-full cursor-pointer bg-slate-100/40 p-2"
         onClick={() => handleTeckToggle()}
@@ -70,7 +65,7 @@ const Skils = () => {
       </div>
 
       {
-        <ul className="skillbox grid grid-cols-2 md:grid-cols-5 w-full text-center bg-slate-50/30  ">
+        <ul className="skillbox grid grid-cols-2 md:grid-cols-5 w-full mx-auto text-center bg-slate-50/30  ">
           {showTechSkill &&
             techSkill.map((skill, index) => (
               <li key={index} className="py-2 text-lg font-medium">

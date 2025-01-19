@@ -7,7 +7,7 @@ const Resume = () => {
 
   return (
     <section id="resume" className=" section">
-      <h2 className="text-4xl font-bold mb-8">My Resume</h2>
+      <h2 className="heading">My Resume</h2>
 
       <div className="flex gap-4">
         {/* Button to view the resume in a new tab */}
