@@ -25,10 +25,10 @@ const Project = ({ setsingleProject, setSelectedProject }) => {
           >
             <img className="w-1/2 object-contain mx-auto " src={item.image} alt={item.title} />
             <div className="flex flex-col justify-center items-center">
-              <h3 className="text-lg md:text-2xl font-heading font-semibold">
+              <h3 className="text-white text-lg md:text-2xl font-heading font-semibold">
                 {item.title}
               </h3>
-              <h4 className="text-sm font-second">{item.category}</h4>
+              <h4 className="text-white text-sm font-second">{item.category}</h4>
             </div>
             <div className="flex flex-col gap-3">
               {item.liveUrl === "" ? (
