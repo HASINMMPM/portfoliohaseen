@@ -4,6 +4,7 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import axios from "axios";
 import { motion } from "framer-motion";
 
+
 const Project = ({ setsingleProject, setSelectedProject }) => {
   const [projectData, setProjectData] = useState([]);
   const fetchProject = async () => {
@@ -23,7 +24,11 @@ const Project = ({ setsingleProject, setSelectedProject }) => {
       className=" section"
   
     >
-      <h3 className="heading ">Projects</h3>
+      <motion.h3
+       initial={{ opacity: 0,}}
+       whileInView={{ opacity: 1}}
+       transition={{ duration:1 }}
+        className="heading text-primary">Some Things I've Built</motion.h3>
       <div className="flex flex-col gap-4">
         {projectData.map((item) => (
           <motion.div
@@ -34,15 +39,15 @@ const Project = ({ setsingleProject, setSelectedProject }) => {
             className="grid grid-cols-1 md:grid-cols-3 gap-5 p-2 items-center border-2 border-white"
           >
             <img
-              className=" h-28 object-contain mx-auto "
+              className=" h-52 object-contain mx-auto "
               src={item.image}
               alt={item.title}
             />
             <div className="flex flex-col justify-center items-center">
-              <h3 className="text-white text-lg md:text-2xl font-heading font-semibold">
+              <h3 className="text-secondary text-lg md:text-2xl font-heading font-semibold">
                 {item.title}
               </h3>
-              <h4 className="text-white text-sm font-second">
+              <h4 className="text-tertiary text-sm font-second">
                 {item.category}
               </h4>
             </div>

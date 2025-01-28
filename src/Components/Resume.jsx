@@ -15,7 +15,7 @@ const Resume = () => {
           href={resumeUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="show-view btn px-6 py-2 hover:px-8 hover:translate-y-2 flex items-center gap-2"
+          className="show-view btn px-6 py-2 hover:px-8 hover:translate-y-2 flex items-center gap-2 text-white"
         >
           View <span className='show-file'><IoIosDocument/></span>
         </a>
@@ -24,7 +24,7 @@ const Resume = () => {
         <a
           href={resumeUrl}
           download="Muhammad_Haseen_Resume.pdf"
-          className="show-down btn px-6 py-2 hover:px-8 hover:translate-y-[-0.5rem] flex items-center gap-2"
+          className="show-down btn px-6 py-2 hover:px-8 hover:translate-y-[-0.5rem] flex items-center gap-2 text-white"
         >
           Download <div className="show"> <FaFileDownload/></div>
         </a>

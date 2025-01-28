@@ -17,6 +17,7 @@ export default function App() {
         <>
           <Welcome />
 
+            <hr className="bg-gray-50 text-white h-1" />
           <div className="relative ">
       
             <Project

@@ -2,7 +2,7 @@ import React from "react";
 
 const SingleProject = ({ selectedProject, setsingleProject }) => {
   return (
-    <section className="  min-h-screen ">
+    <section className="  min-h-screen text-white ">
       <div className="py-4">
         <div class="wave"></div>
         <div class="wave"></div>
@@ -32,7 +32,7 @@ const SingleProject = ({ selectedProject, setsingleProject }) => {
               </button>
             ) : (
               <a
-                className="text-center btn"
+                className="text-center btn text-black"
                 href={selectedProject.liveLink}
                 target="_blank"
               >
@@ -41,7 +41,7 @@ const SingleProject = ({ selectedProject, setsingleProject }) => {
             )}
 
             <a
-              className="text-center btn"
+              className="text-center btn text-black"
               href={selectedProject.githubLink}
               target="_blank"
             >

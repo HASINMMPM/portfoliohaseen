@@ -11,6 +11,13 @@ export default {
         second:[  "Kanit"," sans-serif"],
         third:[ "Lustria", "serif"]
       },
+      colors: { 
+        primary:"#00fc22", 
+        secondary:"#95eae0", 
+        tertiary:"#7abfb7", 
+ 
+       
+      },
       animation: {
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite",

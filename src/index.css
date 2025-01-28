@@ -9,30 +9,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Lustria&display=swap");
 
 .btn {
-  @apply bg-white hover:bg-black duration-300 hover:p-1 rounded-lg hover:text-white;
+  @apply bg-[#196159] hover:bg-black duration-300 hover:p-1 rounded-lg text-white hover:text-tertiary;
 }
 .section{
   @apply py-12 flex flex-col items-center justify-center  text-black px-8
 }
 .heading {
-  @apply text-white text-4xl font-bold mb-8;
+  @apply text-secondary text-4xl font-bold mb-8;
 }
 html {
   scroll-behavior: smooth;
 }
 body{
   background-color: #000000;
+
 }
 
-.app {
-  background: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), 
-    url("https://e0.pxfuel.com/wallpapers/398/350/desktop-wallpaper-nillia-webdesign-web-development-management.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-}
+
 
 
 
@@ -55,7 +48,7 @@ body{
     transform: translateX(0);
   }
 }
-.animatediv {
+/* .animatediv {
 
   overflow: auto;
   background: linear-gradient(315deg, rgb(135, 206, 250) 3%, rgb(204, 255, 229) 38%, rgb(230, 230, 250) 68%, rgb(255, 182, 193) 98%);
@@ -74,14 +67,14 @@ body{
   100% {
       background-position: 0% 0%;
   }
-}
+} */
 
 .wave {
-  background: rgba(197, 197, 197, 0.25);
+  background: #0751412c;
   border-radius: 1000% 1000% 0 0;
   position: fixed;
   width: 200%;
-  height: 12em;
+  height: 10em;
   animation: wave 10s -3s linear infinite;
   transform: translate3d(0, 0, 0);
   opacity: 0.8;
