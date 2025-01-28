@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 // import { projectData } from "../../public/project";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 const Project = ({ setsingleProject, setSelectedProject }) => {
   const [projectData, setProjectData] = useState([]);
   const fetchProject = async () => {
-    const res = await axios.get("https://portfoliobackend-7tqg.onrender.com/portfolio/project/all");
+    const res = await axios.get(
+      "https://portfoliobackend-7tqg.onrender.com/portfolio/project/all"
+    );
     setProjectData(res.data);
     console.log(res);
   };
@@ -15,20 +18,33 @@ const Project = ({ setsingleProject, setSelectedProject }) => {
   }, []);
 
   return (
-    <section id="projects" className=" section">
+    <section
+      id="projects"
+      className=" section"
+  
+    >
       <h3 className="heading ">Projects</h3>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         {projectData.map((item) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, x:200 }}
+            whileInView={{ opacity: 1, x:0 }}
+            transition={{ duration:1 }}
             key={item._id}
-            className="grid grid-cols-1 md:grid-cols-4 gap-5 p-2 items-center border-2 border-white"
+            className="grid grid-cols-1 md:grid-cols-3 gap-5 p-2 items-center border-2 border-white"
           >
-            <img className="w-1/2 object-contain mx-auto " src={item.image} alt={item.title} />
+            <img
+              className=" h-28 object-contain mx-auto "
+              src={item.image}
+              alt={item.title}
+            />
             <div className="flex flex-col justify-center items-center">
               <h3 className="text-white text-lg md:text-2xl font-heading font-semibold">
                 {item.title}
               </h3>
-              <h4 className="text-white text-sm font-second">{item.category}</h4>
+              <h4 className="text-white text-sm font-second">
+                {item.category}
+              </h4>
             </div>
             <div className="flex flex-col gap-3">
               {item.liveUrl === "" ? (
@@ -53,8 +69,7 @@ const Project = ({ setsingleProject, setSelectedProject }) => {
                   View Source
                 </a>
               </button>
-            </div>
-            <button
+              <button
               onClick={() => {
                 setsingleProject(true);
                 setSelectedProject(item);
@@ -63,7 +78,9 @@ const Project = ({ setsingleProject, setSelectedProject }) => {
             >
               Explore More <FaRegArrowAltCircleRight className="arrow " />
             </button>
-          </div>
+            </div>
+         
+          </motion.div>
         ))}
       </div>
     </section>

@@ -15,7 +15,7 @@ const techSkill = [
   "MongoDB",
   "AWS",
   "Mongoose",
-  "JWT",
+  "Authentication",
   "RESTful API",
   "git",
   "Photoshop",
@@ -54,7 +54,7 @@ const Skils = () => {
         className="flex flex-row justify-between items-center w-full cursor-pointer bg-slate-100/40 p-2"
         onClick={() => handleTeckToggle()}
       >
-        <span>Technical Skills</span>{" "}
+        <span className="font-semibold text-lg md:text-xl mx-auto">Technical Skills</span>{" "}
         <button>
           <IoIosArrowDown
             className={
@@ -65,7 +65,7 @@ const Skils = () => {
       </div>
 
       {
-        <ul className="skillbox grid grid-cols-2 md:grid-cols-5 w-full mx-auto text-center bg-slate-50/30  ">
+        <ul className="skillbox grid grid-cols-2 md:grid-cols-4 w-full mx-auto text-center text-white border-4 border-slate-100/40  ">
           {showTechSkill &&
             techSkill.map((skill, index) => (
               <li key={index} className="py-2 text-lg font-medium">
@@ -77,10 +77,10 @@ const Skils = () => {
 
       {/* SOFT */}
       <div
-        className="flex flex-row justify-between items-center w-full mt-4 cursor-pointer bg-slate-100/40 p-2"
+        className="flex flex-row justify-between items-center w-full mt-4 cursor-pointer  bg-slate-100/40 p-2"
         onClick={() => handleSoftToggle()}
       >
-        <span>Soft Skills</span>{" "}
+        <span className="font-semibold text-lg md:text-xl mx-auto">Soft Skills</span>
         <button>
           <IoIosArrowDown
             className={
@@ -91,7 +91,7 @@ const Skils = () => {
       </div>
 
       {
-        <ul className="skillbox grid grid-cols-2 md:grid-cols-5 w-full text-center bg-slate-50/30  ">
+        <ul className="skillbox grid grid-cols-2 md:grid-cols-4 w-full text-center text-white border-4 border-slate-100/40   ">
           {showSoftSkill &&
             softSkill.map((skill, index) => (
               <li key={index} className="py-2 text-lg font-medium">
