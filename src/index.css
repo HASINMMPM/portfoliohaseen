@@ -17,6 +17,11 @@
 .heading {
   @apply text-secondary text-2xl md:text-4xl font-bold mb-16;
 }
+.hr{
+  @apply bg-[#83e3d9] h-[2px] md:h-1 my-6 md:my-12;
+}
+
+
 html {
   scroll-behavior: smooth;
 }

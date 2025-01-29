@@ -50,7 +50,7 @@ const SingleProject = ({ selectedProject, setsingleProject }) => {
           </div>
         </div>
       </div>
-      <hr className="py-1 bg-slate-50" />
+      <hr className="hr" />
       <div className="py-4 px-8 my-3">
   {selectedProject.description.split("\n").map((paragraph, index) => (
     <p key={index} className="mt-1">

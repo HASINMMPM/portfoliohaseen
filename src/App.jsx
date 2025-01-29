@@ -17,18 +17,18 @@ export default function App() {
         <>
           <Welcome />
 
-            <hr className="bg-gray-50 text-white h-1" />
+            <hr className="hr" />
           <div className="relative ">
       
             <Project
               setsingleProject={setsingleProject}
               setSelectedProject={setSelectedProject}
             />
-            <hr className="bg-gray-50 text-white h-1" />
+            <hr className="hr" />
             <Resume />
-            <hr className="bg-gray-50 text-white h-1" />
+            <hr className="hr" />
             <Skils />
-            <hr className="bg-gray-50 text-white h-1" />
+            <hr className="hr" />
             <Contact />
           </div>
         </>
