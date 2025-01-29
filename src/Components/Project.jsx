@@ -37,7 +37,7 @@ const Project = ({ setsingleProject, setSelectedProject }) => {
             whileInView={{ opacity: 1, x:0 }}
             transition={{ duration:1 }}
             key={item._id}
-            className="grid grid-cols-1 md:grid-cols-3 gap-5 p-2 items-center border-2 border-white"
+            className="grid grid-cols-1 md:grid-cols-3 gap-5 p-2 items-center border-b border-tertiary"
           >
             <img
               className=" h-52 object-contain mx-auto "

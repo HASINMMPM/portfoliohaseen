@@ -7,17 +7,17 @@ const SingleProject = ({ selectedProject, setsingleProject }) => {
         <div class="wave"></div>
         <div class="wave"></div>
         <div class="wave"></div>
-        <div className="grid grid-cols-1 md:grid-cols-3  p-8 items-center ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-8 items-center ">
           <img
             className=" h-full"
             src={selectedProject.image}
             alt={selectedProject.title}
           />
           <div className="flex flex-col justify-center items-center">
-            <h3 className="text-lg md:text-2xl font-heading font-semibold">
+            <h3 className="text-lg md:text-2xl font-heading font-semibold text-secondary">
               {selectedProject.title}
             </h3>
-            <h4 className="text-lg font-second">{selectedProject.category}</h4>
+            <h4 className="text-lg font-second text-secondary">{selectedProject.category}</h4>
           </div>
           <div className="flex flex-col gap-2">
             {selectedProject.liveLink === "" ? (
@@ -32,7 +32,7 @@ const SingleProject = ({ selectedProject, setsingleProject }) => {
               </button>
             ) : (
               <a
-                className="text-center btn text-black"
+                className="text-center btn "
                 href={selectedProject.liveLink}
                 target="_blank"
               >
@@ -41,7 +41,7 @@ const SingleProject = ({ selectedProject, setsingleProject }) => {
             )}
 
             <a
-              className="text-center btn text-black"
+              className="text-center btn "
               href={selectedProject.githubLink}
               target="_blank"
             >
