@@ -1,13 +1,18 @@
 import React from "react";
 import { FaFileDownload } from "react-icons/fa";
 import { IoIosDocument } from "react-icons/io";
+import {motion } from "framer-motion"
 
 const Resume = () => {
   const resumeUrl = "/resume.pdf";
 
   return (
     <section id="resume" className=" section">
-      <h2 className="heading">Here My Resume</h2>
+       <motion.h3
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        className="heading ">Here My Resume</motion.h3>
 
       <div className="flex gap-4">
         <a

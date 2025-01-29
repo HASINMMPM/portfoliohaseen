@@ -5,6 +5,8 @@ import Resume from "./Components/Resume";
 import Skils from "./Components/Skils";
 import Welcome from "./Components/Welcome";
 import SingleProject from "./Components/SingleProject";
+import About from "./Components/About";
+import { FaAngleDoubleUp } from "react-icons/fa";
 // import { NeatGradient } from "@firecms/neat";
 
 export default function App() {
@@ -17,20 +19,22 @@ export default function App() {
         <>
           <Welcome />
 
-            <hr className="hr" />
+          <hr className="hr" />
           <div className="relative ">
-      
+            <About />
+            <hr className="hr" />
             <Project
               setsingleProject={setsingleProject}
               setSelectedProject={setSelectedProject}
             />
-            <hr className="hr" />
-            <Resume />
+            {/* <hr className="hr" />
+            <Resume /> */}
             <hr className="hr" />
             <Skils />
             <hr className="hr" />
             <Contact />
           </div>
+          <a href="#" className="fixed right-0 bottom-0 mr-6 mb-6 p-3 text-lg md:text-3xl bg-[#196159] hover:bg-black duration-300 rounded-full text-white hover:text-tertiary"><FaAngleDoubleUp/></a>
         </>
       ) : (
         <SingleProject
