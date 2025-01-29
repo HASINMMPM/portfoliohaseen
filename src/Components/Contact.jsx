@@ -4,11 +4,17 @@ import { FaGithub } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import {motion } from "framer-motion"
 
 const Contact = () => {
   return (
     <section id="contact" className="section ">
-      <h2 className="heading">Get In Touch</h2>
+         <motion.h3
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        className="heading "
+      >Get In Touch</motion.h3>
 
       {/* <div className="flex flex-col md:flex-row gap-8  w-full ">
           <a

@@ -9,13 +9,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lustria&display=swap");
 
 .btn {
-  @apply bg-[#196159] hover:bg-black duration-300 hover:p-1 rounded-lg text-white hover:text-tertiary;
+  @apply bg-[#196159] hover:bg-black duration-300 py-1 rounded-lg text-white hover:text-tertiary;
 }
 .section{
   @apply py-12 flex flex-col items-center justify-center  text-black px-8
 }
 .heading {
-  @apply text-secondary text-4xl font-bold mb-8;
+  @apply text-secondary text-2xl md:text-4xl font-bold mb-16;
 }
 html {
   scroll-behavior: smooth;

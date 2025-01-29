@@ -13,7 +13,7 @@ const Welcome = () => {
 
   return (
     <main>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-4 h-screen items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-4 h-screen items-center place-items-center">
         {/* img */}
         <motion.img
           initial={{ opacity: 0, x: -100 }}
@@ -32,7 +32,7 @@ const Welcome = () => {
             className="flex flex-col text-white  justify-center   "
           >
             <h1 className="font-heading text-primary text-lg md:text-3xl">Hi; I'm </h1>
-            <h2 className="text-2xl md:text-6xl text-secondary font-second">
+            <h2 className="text-4xl md:text-6xl text-secondary font-second">
              Muhammad Haseen NM.
             </h2>
             <h3 className="text-xl md:text-3xl text-tertiary font-third">

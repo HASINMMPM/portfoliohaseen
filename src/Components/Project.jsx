@@ -24,11 +24,12 @@ const Project = ({ setsingleProject, setSelectedProject }) => {
       className=" section"
   
     >
-      <motion.h3
-       initial={{ opacity: 0,}}
-       whileInView={{ opacity: 1}}
-       transition={{ duration:1 }}
-        className="heading text-primary">Some Things I've Built</motion.h3>
+         <motion.h3
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 2 }}
+              className="heading "
+            >Some Things I've Built</motion.h3>
       <div className="flex flex-col gap-4">
         {projectData.map((item) => (
           <motion.div
@@ -53,7 +54,7 @@ const Project = ({ setsingleProject, setSelectedProject }) => {
             </div>
             <div className="flex flex-col gap-3">
               {item.liveUrl === "" ? (
-                <button className="bg-red-200 max-h-16 rounded-lg cursor-not-allowed">
+                <button className="bg-red-200 rounded-lg cursor-not-allowed">
                   <a
                     className="cursor-not-allowed"
                     href={item.liveUrl}
@@ -63,15 +64,15 @@ const Project = ({ setsingleProject, setSelectedProject }) => {
                   </a>
                 </button>
               ) : (
-                <button className="btn  max-h-16 rounded-lg">
+                <button className="btn  rounded-lg">
                   <a href={item.liveUrl} target="_blank">
                     Take a Look
                   </a>
                 </button>
               )}
-              <button className="btn  max-h-16 rounded-lg">
+              <button className="btn  rounded-lg ">
                 <a href={item.githubUrl} target="_blank">
-                  View Source
+                  View Source 
                 </a>
               </button>
               <button

@@ -192,14 +192,14 @@ const Skils = () => {
       <motion.h3
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="heading text-primary"
+        transition={{ duration: 2 }}
+        className="heading "
       >
         few technologies I’ve been worked;
       </motion.h3>
 
       <div className="flex flex-row justify-between items-center w-full cursor-pointer p-2"></div>
-      <ul className="skillbox grid grid-cols-2 md:grid-cols-4 w-full mx-auto text-center text-white">
+      <ul className="skillbox grid grid-cols-2 md:grid-cols-4 w-full mx-auto place-items-center">
         {techSkill.map((skill, index) => (
           <li key={index} className="py-2 ">
             <motion.img
@@ -207,7 +207,7 @@ const Skils = () => {
             whileInView={{ opacity: 1, scale:1 }}
             transition={{ duration: 1 }}
              
-              className="w-20  object-contain bg- p-2"
+              className="w-20  object-contain  p-2"
               src={skill.icon}
               alt={skill.name}
               title={skill.name}
