@@ -19,19 +19,19 @@ const Contact = () => {
       {/* <div className="flex flex-col md:flex-row gap-8  w-full ">
           <a
             className="hover:text-tertiary hover: underline-offset-4 text-secondary text-lg duration-300 "
-            href="tel://+919995958847"
+            className="bg-tertiary p-1" href="tel://+919995958847"
           >
             Call me
           </a>
           <a
             className="hover:text-tertiary hover:underline-offset-4 text-secondary text-lg duration-300 "
-            href="sms://+919995958847"
+            className="bg-tertiary p-1" href="sms://+919995958847"
           >
             Messsege me
           </a>
           <a
             className="hover:text-tertiary hover:underline-offset-4 text-secondary text-lg duration-300"
-            href="mailto:hasi11034@gmail.com"
+            className="bg-tertiary p-1" href="mailto:hasi11034@gmail.com"
           >
             Email me
           </a>
@@ -41,17 +41,17 @@ const Contact = () => {
         <li>
           <a
             target="_blank"
-            href="https://www.linkedin.com/in/muhmmadhaseennm11034/"
+            className="bg-tertiary p-1" href="https://www.linkedin.com/in/muhmmadhaseennm11034/"
           >
-            <i class="fab fa-facebook-f icon">
+            <i className="fab fa-facebook-f icon">
               {" "}
               <AiFillLinkedin />
             </i>{" "}
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://github.com/HASINMMPM">
-            <i class="fab fa-twitter icon">
+          <a target="_blank" className="bg-tertiary p-1" href="https://github.com/HASINMMPM">
+            <i className="fab fa-twitter icon">
               {" "}
               <FaGithub />
             </i>
@@ -60,25 +60,25 @@ const Contact = () => {
         <li>
           <a
             target="_blank"
-            href="https://wa.me/917736965052?text=Hello Haseen"
+            className="bg-tertiary p-1" href="https://wa.me/917736965052?text=Hello Haseen"
           >
-            <i class="fab fa-google-plus-g icon">
+            <i className="fab fa-google-plus-g icon">
               {" "}
               <IoLogoWhatsapp />
             </i>
           </a>
         </li>
         <li>
-          <a target="_blank" href="tel://+919995958847">
-            <i class="fab fa-twitter icon">
+          <a target="_blank" className="bg-tertiary p-1" href="tel://+919995958847" >
+            <i className="fab fa-twitter icon">
               {" "}
-              <FaPhoneAlt />
+              <FaPhoneAlt className=""/>
             </i>{" "}
           </a>
         </li>
         <li>
-          <a target="_blank" href="mailto:hasi11034@gmail.com">
-            <i class="fab fa-twitter icon">
+          <a target="_blank" className="bg-tertiary p-1" href="mailto:hasi11034@gmail.com">
+            <i className="fab fa-twitter icon">
               {" "}
               <MdEmail />
             </i>

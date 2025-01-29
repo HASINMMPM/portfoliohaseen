@@ -12,9 +12,11 @@ export default {
         third:[ "Lustria", "serif"]
       },
       colors: { 
-        primary:"#00fc22", 
-        secondary:"#95eae0", 
-        tertiary:"#7abfb7", 
+        primary:"#eb5160", 
+        secondary:"#b7999c", 
+        tertiary:"#aaaaaa", 
+        quaternary:"#dfe0e2",
+        
  
        
       },

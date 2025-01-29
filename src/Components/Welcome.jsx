@@ -19,7 +19,7 @@ const Welcome = () => {
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          src={person}
+          src="https://muhammad-haseen-nm.onrender.com/assets/person-BK6dIwOX.jpg"
           alt="haseen"
           className="rounded-full w-1/2 object-cover grayscale hover:grayscale-0 duration-300 "
         />
@@ -46,7 +46,7 @@ const Welcome = () => {
               <a
                 href={link.link}
                 key={index}
-                className="text-sm lg:text-xl  cursor-pointer hover:underline duration-300 p-4 underline-offset-8 flex justify-center items-center  text-white"
+                className="text-sm lg:text-xl  cursor-pointer hover:underline duration-300 p-4 underline-offset-8 flex justify-center items-center  text-quaternary"
               >
                 <span>{link.name}</span>
               </a>

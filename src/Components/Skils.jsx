@@ -163,7 +163,7 @@ const Skils = () => {
     {
       name: "MongoDb",
       icon:
-      "https://www.shareicon.net/data/128x128/2015/10/06/112729_development_512x512.png",
+      "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
     },
     {
       name: "Mongoose",
