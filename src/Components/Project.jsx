@@ -1,40 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 // import { projectData } from "../../public/project";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import axios from "axios";
+// import axios from "axios";
 import { motion } from "framer-motion";
+import  projectData  from "../../public/project.json";
 
 const Project = ({ setsingleProject, setSelectedProject }) => {
-  const [projectData, setProjectData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const fetchProject = async () => {
-    const res = await axios.get(
-      "https://portfoliobackend-7tqg.onrender.com/portfolio/project/all"
-    );
-    setProjectData(res.data);
-    setLoading(false);
-    console.log(res);
-  };
-  useEffect(() => {
-    fetchProject();
-  }, []);
+  // const [projectData, setProjectData] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const fetchProject = async () => {
+  //   const res = await axios.get(
+  //     "./Project"
+  //   );
+  //   setProjectData(res.data);
+  //   setLoading(false);
+  //   console.log(res);
+  // };
+  // useEffect(() => {
+  //   fetchProject();
+  // }, []);
 
-  if (loading) {
-    return (
-      <div className="flex justify-center">
-        <div className="animate-pulse flex flex-col items-center gap-4 w-60">
-          <div>
-            <div className="w-48 h-6 bg-slate-400 rounded-md"></div>
-            <div className="w-28 h-4 bg-slate-400 mx-auto mt-3 rounded-md"></div>
-          </div>
-          <div className="h-7 bg-slate-400 w-full rounded-md"></div>
-          <div className="h-7 bg-slate-400 w-full rounded-md"></div>
-          <div className="h-7 bg-slate-400 w-full rounded-md"></div>
-          <div className="h-7 bg-slate-400 w-1/2 rounded-md"></div>
-        </div>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="flex justify-center">
+  //       <div className="animate-pulse flex flex-col items-center gap-4 w-60">
+  //         <div>
+  //           <div className="w-48 h-6 bg-slate-400 rounded-md"></div>
+  //           <div className="w-28 h-4 bg-slate-400 mx-auto mt-3 rounded-md"></div>
+  //         </div>
+  //         <div className="h-7 bg-slate-400 w-full rounded-md"></div>
+  //         <div className="h-7 bg-slate-400 w-full rounded-md"></div>
+  //         <div className="h-7 bg-slate-400 w-full rounded-md"></div>
+  //         <div className="h-7 bg-slate-400 w-1/2 rounded-md"></div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <section id="projects" className=" section">
