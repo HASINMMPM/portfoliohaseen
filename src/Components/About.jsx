@@ -46,9 +46,11 @@ const About = () => {
         </div>
 
         <motion.img
-          className="w-[40%] object-contain mx-auto grayscale hover:grayscale-0 duration-300 rounded-full"
+          className="hnm w-[60%] md:w-[40%] object-contain mx-auto grayscale hover:grayscale-0 duration-300 "
           src="https://muhammad-haseen-nm.onrender.com/assets/person-BK6dIwOX.jpg"
           alt="muhammad haseen"
+          onContextMenu={(e) => e.preventDefault()}
+          // onDragStart={(e) => e.preventDefault()}
           initial={{ opacity: 0, x: 100 ,rotate:90,scale:.3,y:-50}}
           whileInView={{ opacity: 1, x: 0 ,rotate:0,scale:1,y:0}}
           transition={{ duration: 1, delay: 0.5 }}

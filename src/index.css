@@ -227,3 +227,7 @@ ul li:nth-child(3) a:before {
   background: #24CC63;
 
 }
+
+.hnm{
+  border-radius:36% 64% 29% 71% / 39% 58% 42% 61% ;
+}
