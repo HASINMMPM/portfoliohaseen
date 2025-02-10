@@ -1,6 +1,7 @@
 import React from "react";
 
 const SingleProject = ({ selectedProject, setsingleProject }) => {
+  console.log(selectedProject)
   return (
     <section className="  min-h-screen text-white ">
       <div className="py-4">
@@ -25,7 +26,7 @@ const SingleProject = ({ selectedProject, setsingleProject }) => {
                 <a
                   className="cursor-not-allowed"
                   href={selectedProject.liveLink}
-                  target="_blank"
+                 
                 >
                   Take a Look
                 </a>
@@ -33,7 +34,7 @@ const SingleProject = ({ selectedProject, setsingleProject }) => {
             ) : (
               <a
                 className="text-center btn "
-                href={selectedProject.liveLink}
+                href={selectedProject.liveUrl}
                 target="_blank"
               >
                 Take a Look
@@ -42,7 +43,7 @@ const SingleProject = ({ selectedProject, setsingleProject }) => {
 
             <a
               className="text-center btn "
-              href={selectedProject.githubLink}
+              href={selectedProject.githubUrl}
               target="_blank"
             >
               View Source
@@ -68,7 +69,7 @@ const SingleProject = ({ selectedProject, setsingleProject }) => {
         </button> */}
        
 <button
-class="btn text-center w-48 rounded-2xl h-14 relative text-black font-semibold group"
+class="btn text-center w-48 rounded-2xl h-14 relative mb-6 text-black font-semibold group"
   onClick={() => setsingleProject(false)}
 >
   <div

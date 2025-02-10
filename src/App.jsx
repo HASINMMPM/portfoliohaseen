@@ -42,6 +42,22 @@ export default function App() {
           selectedProject={selectedProject}
         />
       )}
+
+      
+<div className="area z-0" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
     </div>
   );
 }
