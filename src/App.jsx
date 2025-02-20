@@ -34,7 +34,12 @@ export default function App() {
             <hr className="hr" />
             <Contact />
           </div>
-          <a href="#" className="fixed right-0 bottom-0 mr-6 mb-6 p-3 text-lg md:text-3xl bg-[#196159] hover:bg-black duration-300 rounded-full text-white hover:text-tertiary"><FaAngleDoubleUp/></a>
+          <a
+            href="#"
+            className="fixed right-0 bottom-0 mr-6 mb-6 p-3 text-lg md:text-3xl bg-[#196159] hover:bg-black duration-300 rounded-full text-white hover:text-tertiary"
+          >
+            <FaAngleDoubleUp />
+          </a>
         </>
       ) : (
         <SingleProject
@@ -43,21 +48,20 @@ export default function App() {
         />
       )}
 
-      
-<div className="area z-0" >
-            <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
-    </div >
+      <div className="area z-0">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </div>
   );
 }

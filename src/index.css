@@ -9,7 +9,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lustria&display=swap");
 
 .btn {
-  @apply bg-[#196159] hover:bg-black duration-300 py-1 rounded-lg text-white hover:text-tertiary;
+  @apply bg-[#196159] hover:bg-black duration-300  rounded-lg text-white hover:text-tertiary;
 }
 .section{
   @apply py-12 flex flex-col items-center justify-center  text-black px-8
@@ -21,6 +21,11 @@
   @apply bg-tertiary h-[2px] md:h-1 my-6 md:my-12;
 }
 
+.btn {
+  pointer-events: auto !important;
+  /* background-color: #196159; */
+
+}
 
 html {
   scroll-behavior: smooth;
