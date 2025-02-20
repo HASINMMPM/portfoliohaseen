@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 // import { FaFileDownload } from "react-icons/fa";
 const About = () => {
-  const resumeUrl = "/resume.pdf";
+  const resumeUrl = "/Resume MUHAMMAD HASEEN NM.pdf";
   return (
     <section className="p-6">
       <motion.h3
@@ -32,24 +32,29 @@ const About = () => {
             and a drive for innovation, I’m always looking for exciting
             opportunities to collaborate and create impactful digital solutions.
           </motion.p>
-          <a
+          {/* <a
             href={resumeUrl}
             download="Muhammad_Haseen_Resume.pdf"
             className="show-down btn px-6 py-3 hover:px-8 text-center w-1/2 items-center gap-2 text-white"
           >
             Download Resume
-            {/* <div className="show">
-              {" "}
-              <FaFileDownload />
-            </div> */}
-          </a>
+           
+          </a> */}
+            <a
+              href={resumeUrl}
+              className="text-center w-1/2 items-center gap-2 text-white p-2  btn z-50 relative"
+              target="_blank"
+              // rel="noopener noreferrer"
+            >
+              Resume
+            </a>
         </div>
 
         <motion.img
           className="hnm w-[60%] md:w-[40%] object-contain mx-auto grayscale hover:grayscale-0 duration-300 "
           src="https://muhammad-haseen-nm.onrender.com/assets/person-BK6dIwOX.jpg"
           alt="muhammad haseen"
-          onContextMenu={(e) => e.preventDefault()}
+          // onContextMenu={(e) => e.preventDefault()}
           // onDragStart={(e) => e.preventDefault()}
           initial={{ opacity: 0, x: 100 ,rotate:90,scale:.3,y:-50}}
           whileInView={{ opacity: 1, x: 0 ,rotate:0,scale:1,y:0}}
