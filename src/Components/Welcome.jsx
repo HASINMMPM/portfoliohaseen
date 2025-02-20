@@ -28,7 +28,7 @@ const Welcome = () => {
           </h2>
           <h3 className="text-xl md:text-6xl text-tertiary font-third">
             {" "}
-            MERN Stack Developer.
+            Full Stack Developer.
           </h3>
         </motion.div>
         {/* <div className="grid grid-cols-2 md:grid-cols-4  gap-2 place-items-center">
