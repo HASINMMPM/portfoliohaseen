@@ -69,7 +69,7 @@ const Contact = () => {
           </a>
         </li>
         <li>
-          <a target="_blank" className="bg-tertiary p-1" href="tel://+919995958847" >
+          <a target="_blank" className="bg-tertiary p-1" href="tel://+917736965052" >
             <i className="fab fa-twitter icon">
               {" "}
               <FaPhoneAlt className=""/>
