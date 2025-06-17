@@ -15,13 +15,8 @@ const Hero = () => {
           Node.js</strong>
         </p>
         <div className="flex flex-wrap gap-4">
-          <a
-            href="#contact"
-            className="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300 shadow-lg"
-          >
-            Hire Me
-          </a>
-          <button className="px-6 py-3 border border-blue-500 text-blue-500  rounded-full hover:bg-blue-500 hover:text-white transition duration-300">
+        
+          <button className="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300 shadow-lg">
             Download Resume
           </button>
         </div>

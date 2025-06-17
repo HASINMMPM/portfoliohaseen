@@ -73,7 +73,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium">Phone Number</h4>
                   <a
-                    href="tel:9995958847"
+                    href="tel:7736965052"
                     className="text-gray-600  hover:text-blue-500"
                   >
                    7736965052
