@@ -3,6 +3,7 @@ import { FaDownload } from "react-icons/fa";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import resume from "../assets/resume Muhammad Haseen.pdf"
 
 const About = () => {
   return (
@@ -11,8 +12,8 @@ const About = () => {
         <h2 className="text-3xl font-bold text-center mb-12 animate-fade-in">
           <span className="gradient-text">About Me</span>
         </h2>
-        <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 animate-fade-in delay-100">
-          <div className="md:w-3/4 mx-auto">
+        <div className="max-w-3xl md:max-w-3/4 mx-auto flex flex-col md:flex-row items-center gap-8 animate-fade-in delay-100">
+          <div className="md:w-full mx-auto">
             <p className="text-lg mb-4 text-black">
               I'm a passionate Full Stack Developer with hands-on expertise in the MERN stack (MongoDB, Express.js, React, and Node.js). I specialize in building responsive, high-performance, and scalable web applications. My journey into web development began with a deep interest in problem-solving and a desire to create meaningful digital experiences. Over time, I’ve worked on a variety of projects, from simple websites to complex web applications, allowing me to sharpen both my technical skills and creative thinking.
             </p>
@@ -42,10 +43,10 @@ const About = () => {
               >
                 Contact Me
               </a>
-              <button className="px-6 py-3 border border-blue-500 text-blue-500  rounded-full hover:bg-blue-500 hover:text-white transition duration-300 flex items-center">
+              <a href={resume} target="_blank" className="px-6 py-3 border border-blue-500 text-blue-500  rounded-full hover:bg-blue-500 hover:text-white transition duration-300 flex items-center">
                 Resume
                 <FaDownload className="ml-2" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
