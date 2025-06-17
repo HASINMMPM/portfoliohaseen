@@ -2,37 +2,53 @@
   {
     "_id": { "$oid": "6789dc2a1ab2c987f68edaac" },
     "title": "hugry Hub",
-    "description": "This food delivery website is built using the MERN stack, integrating MongoDB for database management, Express.js and Node.js for the backend, and React for the frontend. It utilizes advanced React features such as useState, useEffect, useContext, and useNavigate hooks to ensure a smooth and responsive user experience.\nUsers can explore a wide range of restaurants, select dishes based on their preferences, and apply coupon codes for discounts. Secure user authentication is handled through Twilio's SMS-based verification during signup, while admin signup includes email verification via Nodemailer.\nFor seamless and secure payment processing, Razorpay was integrated, giving users flexible online payment options. Additionally, users can cancel their orders at any time before delivery starts, adding convenience.\nThe platform includes a feedback system that allows users to leave comments on their experiences, supporting continuous service improvement. This project showcases my ability to handle complex state management and API integrations, demonstrating my full-stack development skills with a focus on scalability and security.",
-    "image": "http://res.cloudinary.com/dytr4lpxm/image/upload/v1737088004/rcmn8vkuklxw0dcjix4h.png",
+    "description": "Created a MERN-based food delivery app with Razorpay payments, SMS/email auth via Twilio/Nodemailer, and order management. Features include user feedback, coupons, and secure role-based access.",
+    "image": "./hungry hub.JPG",
     "liveUrl": "https://food-order-frontend-ai6i.onrender.com",
     "githubUrl": "https://github.com/HASINMMPM/Food-order-frontend",
     "dateCreated": { "$date": { "$numberLong": "1737088042915" } },
     "__v": { "$numberInt": "0" },
     "category": "Food order",
-    "npm": ["Axios", "React Hook Form", "jwt", "yup", "@hookform/resolvers"]
+    "npm": ["Axios", "React Hook Form", "nodemailer", "yup", "@hookform/resolvers"],
+    "company": false
   },
   {
     "_id": { "$oid": "678bd3eec4f1f62b11808241" },
     "title": "Brain Flip",
-    "description": " I developed a fully responsive memory card game using React, featuring smooth gameplay mechanics and dynamic state management with useState and useEffect hooks. The game challenges players to match pairs of emoji-based cards while incorporating logic to manage user interactions, prevent multiple simultaneous clicks, and provide immediate feedback for matched pairs.\r\nThe card icons are randomized at the start of each game, ensuring a unique experience every time. The game dynamically tracks user interactions and flips cards based on their position, checking for matches. If a pair is matched, the cards remain flipped and marked as 'solved'. If not, they automatically flip back after a brief delay.\r\nI used SweetAlert2 to create a seamless alert system, displaying a congratulatory message once the game is completed, followed by an automatic page refresh to start a new game. The game is designed to handle complex state transitions with ease, using logic to prevent further clicks while cards are being checked for matches, ensuring smooth user experience.\r\nThis project demonstrates my ability to build interactive and state-driven applications using React, managing asynchronous events, and optimizing for responsive gameplay across different devices.",
-    "image": "http://res.cloudinary.com/dytr4lpxm/image/upload/v1737216967/pjfmiqoebrb0lp4pendr.png",
+    "description": " Developed a responsive emoji memory game using React with randomized cards, smooth match logic, and SweetAlert2 end-game alerts. Handled async events and state transitions for seamless gameplay..",
+    "image": "./brain flip.JPG",
     "category": "Memory Game",
     "liveUrl": "https://brain-flip-game.vercel.app",
     "githubUrl": "https://github.com/HASINMMPM/Memmory-game",
     "dateCreated": { "$date": { "$numberLong": "1737217006115" } },
     "__v": { "$numberInt": "0" },
-    "npm": ["sweetalert2","useEffect","useState"]
+    "npm": ["sweetalert2", "useEffect", "useState"],
+    "company": false
   },
   {
     "_id": { "$oid": "678fc4a2e35637e2bc919ec7" },
     "title": "Sahachari Center Kolmanna",
-    "description": "The Sahachari Center web application is a dedicated platform designed to assist physically challenged individuals by providing access to essential tools and services. This user-friendly application allows users to view the availability of tools, check their current count, and submit service requests seamlessly without requiring login credentials. Upon submitting a service application, a notification is automatically sent to the admin for review and further action. Users can also access the location details of the center directly through the application.\r\n\r\nThe admin dashboard is designed for efficient management and control, enabling administrators to view submitted applications, update tool counts, and add or remove tools from inventory. Additionally, admins can register tools issued to users, which triggers an automated WhatsApp notification to inform the users about their issued tools. This feature ensures clear and instant communication between the center and its beneficiaries.\r\n\r\nBuilt with a robust tech stack, the application leverages Express, MongoDB, and JSON Web Tokens for secure and scalable backend operations, while the frontend is developed using React, Zustand, and React Hook Form for a smooth and responsive user experience. This application streamlines the process of tool distribution, promotes accessibility, and ensures better coordination between users and administrators.",
+    "description": "Created a dynamic emoji-based memory game with randomized cards, smooth animations, and instant match feedback. Designed for responsive play and engaging user experience across devices.",
     "image": "http://res.cloudinary.com/dytr4lpxm/image/upload/v1737475233/gt6wgjdptpkaww5j8ud6.png",
     "category": "Service Tools",
     "liveUrl": "https://sahachari-center-kolmanna-skssf.onrender.com/",
     "githubUrl": "https://github.com/HASINMMPM/sahachari-center-frontend",
     "dateCreated": { "$date": { "$numberLong": "1737475234767" } },
     "__v": { "$numberInt": "0" },
-    "npm": ["bcrypt", "dotenv", "joi","mongoose","Zustand"]
+    "npm": ["bcrypt", "dotenv", "joi", "mongoose", "Zustand"],
+    "company": false
+  },
+  {
+    "_id": { "$oid": "678fc4a2e35637e2bc919ec8" },
+    "title": "Echomind",
+    "description": "Co-developed EchoMind, an AI-powered chatbot designed with Clean Architecture. Worked collaboratively with a UI/UX designer to ensure a seamless user experience. The system features a centralized error handler, a single entry point for all API calls, and is fully tested for stability and maintainability.",
+    "image": "./echomind.png",
+    "category": "Service Tools",
+    "liveUrl": "https://echomind-ai-six.vercel.app/",
+    "githubUrl": "https://github.com/HASINMMPM/sahachari-center-frontend",
+    "dateCreated": { "$date": { "$numberLong": "1737475234767" } },
+    "__v": { "$numberInt": "0" },
+    "npm": ["Doxygen", "jwt", "joi", "jest", "vitest","Redux toolkit"],
+    "company": true
   }
 ]

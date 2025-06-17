@@ -1,143 +1,69 @@
-import React, { useState } from "react";
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
-// import axios from "axios";
-import { motion } from "framer-motion";
-import projectData from "../assets/project.json";
+import React from 'react';
+import projects from "../assets/project.json"
 
-const Project = ({ setsingleProject, setSelectedProject }) => {
-  // const [projectData, setProjectData] = useState([]);
-  // const [keyWord, setKeyword] = useState("");
-  // setKeyword(projectData)
-  // console.log(keyWord)
-  // const [loading, setLoading] = useState(true);
-  // const fetchProject = async () => {
-  //   const res = await axios.get(
-  //     "./Project"
-  //   );
-  //   setProjectData(res.data);
-  //   setLoading(false);
-  //   console.log(res);
-  // };
-  // useEffect(() => {
-  //   fetchProject();
-  // }, []);
-
-  // if (loading) {
-  //   return (
-  //     <div className="flex justify-center">
-  //       <div className="animate-pulse flex flex-col items-center gap-4 w-60">
-  //         <div>
-  //           <div className="w-48 h-6 bg-slate-400 rounded-md"></div>
-  //           <div className="w-28 h-4 bg-slate-400 mx-auto mt-3 rounded-md"></div>
-  //         </div>
-  //         <div className="h-7 bg-slate-400 w-full rounded-md"></div>
-  //         <div className="h-7 bg-slate-400 w-full rounded-md"></div>
-  //         <div className="h-7 bg-slate-400 w-full rounded-md"></div>
-  //         <div className="h-7 bg-slate-400 w-1/2 rounded-md"></div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
-
+const Project = () => {
   return (
-    <section id="projects" className=" section">
-      <motion.h3
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 2 }}
-        className="heading "
-      >
-        Some Things I've Built
-      </motion.h3>
-      <div className="flex flex-col gap-4">
-        {projectData.map((item) => (
-          <div className="border-b border-tertiary">
-            <motion.div
-              // initial={{ opacity: 0, x: 200 }}
-              // whileInView={{ opacity: 1, x: 0 }}
-              // transition={{ duration: 1 }}
-              key={item._id}
-              className="grid grid-cols-1 md:grid-cols-3 gap-5 p-2 items-center "
+    <section id="projects" className="py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center mb-4 animate-fade-in">
+          <span className="gradient-text">My Projects</span>
+        </h2>
+        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto animate-fade-in delay-100">
+          Here are some of my recent projects. Each one was built to solve a
+          specific problem or explore new technologies.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={project._id}
+              className={`card rounded-xl border shadow-md overflow-hidden animate-fade-in delay-${(index + 1) * 100} group`}
             >
-              <motion.img
-                initial={{ opacity: 0, x: -200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
-                className=" h-52 object-contain mx-auto "
-                src={item.image}
-                alt={item.title}
-              />
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
-                className="flex flex-col justify-center items-center"
-              >
-                <h3 className="text-secondary text-lg md:text-2xl font-heading font-semibold">
-                  {item.title}
-                </h3>
-                <h4 className="text-tertiary text-sm font-second">
-                  {item.category}
-                </h4>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
-                className="flex flex-col gap-3"
-              >
-                <button className="btn">
-                  <a
-                    href={item.liveUrl}
-                    className="text-white0 w-full py-2 inline-block z-50 relative"
-                    target="_blank"
-                    // rel="noopener noreferrer"
-                  >
-                    View Project
-                  </a>
-                </button>
-                <button className="btn">
+              <div className="h-48 overflow-hidden">
+               {project.company ===true ? <span className='relative ml-5 rounded-md bg-blue-500 text-white font-mono text-sm py-1 px-3 top-8 z-10'>Company Project</span>:<></>}
+                <img
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-gray-600 mb-4 line-clamp-6">{project.description}</p>
 
-<a
-  href={item.githubUrl}
-  className="text-white  w-full py-2   inline-block z-50 relative"
-  target="_blank"
-  // rel="noopener noreferrer"
-  >
-  View Source
-</a>
-  </button>
-  <button
-    onClick={() => {
-      setsingleProject(true);
-      setSelectedProject(item);
-    }}
-    className="explore text-white py-2  btn z-50 relative rounded-lg  flex justify-center items-center gap-2"
-  >
-
-
-Description <FaRegArrowAltCircleRight className="arrow " />
-
-  </button>
-  
-              </motion.div>
-            </motion.div>
-            <motion.div className="w-full my-8 ">
-              {item.npm && (
-                <ul className="flex flex-row flex-wrap gap-3 items-center justify-start  md:gap-12 mb-4">
-                  {item.npm.map((dependency, index) => (
-                    <li
-                      key={index}
-                      className="text-tertiary rounded-xl border-primary border-2 mx-auto px-3 py-1"
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.npm.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="tech-badge px-3 py-1 rounded-full text-sm bg-gray-100"
                     >
-                      {dependency}
-                    </li>
+                      {tech}
+                    </span>
                   ))}
-                </ul>
-              )}
-            </motion.div>
-          </div>
-        ))}
+                </div>
+
+                <div className="flex space-x-4">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:text-blue-600 flex items-center"
+                  >
+                    <i className="fab fa-github mr-1" /> Code
+                  </a>
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:text-blue-600 flex items-center"
+                  >
+                    <i className="fas fa-external-link-alt mr-1" /> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

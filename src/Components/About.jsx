@@ -1,68 +1,65 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react'
+import { FaDownload } from 'react-icons/fa'
 
-// import { FaFileDownload } from "react-icons/fa";
 const About = () => {
-  const resumeUrl = "/Resume MUHAMMAD HASEEN NM.pdf";
   return (
-    <section className="p-6">
-      <motion.h3
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 2 }}
-        className="heading "
-      >
-        About me
-      </motion.h3>
-      <div className="flex flex-col-reverse md:flex-row gap-12 md:gap-2 place-items-center">
-        <div className="flex flex-col gap-12 justify-center ">
-          <motion.p
-            className="text-tertiary text-[15px] md:text-lg"
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            I’m Muhammad Haseen, a passionate MERN Developer with a background
-            in English Language and Literature from Calicut University (Class of
-            2023). My deep interest in the IT field led me to transition into
-            full-stack web development, where I specialize in MongoDB,
-            Express.js, React, and Node.js. I love building dynamic,
-            user-friendly applications and continuously learning new
-            technologies to enhance my skills. With a problem-solving mindset
-            and a drive for innovation, I’m always looking for exciting
-            opportunities to collaborate and create impactful digital solutions.
-          </motion.p>
-          {/* <a
-            href={resumeUrl}
-            download="Muhammad_Haseen_Resume.pdf"
-            className="show-down btn px-6 py-3 hover:px-8 text-center w-1/2 items-center gap-2 text-white"
-          >
-            Download Resume
-           
-          </a> */}
+     <section id="about" className="py-20 bg-slate-50">
+    <div className="container mx-auto px-6">
+      <h2 className="text-3xl font-bold text-center mb-12 animate-fade-in">
+        <span className="gradient-text">About Me</span>
+      </h2>
+      <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 animate-fade-in delay-100">
+        <div className="md:w-3/4 mx-auto">
+          <p className="text-lg mb-4 text-black">
+            I'm a passionate Full Stack Developer with expertise in the MERN
+            stack (MongoDB, Express.js, React, and Node.js). With over 3 years
+            of experience, I specialize in building responsive, performant, and
+            scalable web applications.
+          </p>
+          <p className="text-lg mb-6 text-black">
+            My journey in web development began when I discovered my love for
+            problem-solving and creating digital experiences. Since then, I've
+            worked on various projects ranging from simple websites to complex
+            web applications.
+          </p>
+          <div className="flex flex-wrap gap-4 mb-6">
+            <div className="flex items-center">
+              <i className="fas fa-map-marker-alt text-blue-500 mr-2" />
+              <span className="text-black">
+               Malappuram, Kerala
+              </span>
+            </div>
+            <div className="flex items-center">
+              <i className="fas fa-check-circle text-blue-500 mr-2" />
+              <span className="text-black">
+                Available for work
+              </span>
+            </div>
+            <div className="flex items-center">
+              <i className="fas fa-calendar-alt text-blue-500 mr-2" />
+              <span className="text-black">
+                Full-time / Freelance
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-4">
             <a
-              href={resumeUrl}
-              className="text-center w-1/2 items-center gap-2 text-white p-2  btn z-50 relative"
-              target="_blank"
-              // rel="noopener noreferrer"
+              href="#contact"
+              className="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300"
             >
-              Resume
+              Contact Me
             </a>
+            <button className="px-6 py-3 border border-blue-500 text-blue-500  rounded-full hover:bg-blue-500 hover:text-white transition duration-300 flex items-center">
+              Resume
+             <FaDownload className='ml-2' />
+            </button>
+          </div>
         </div>
-
-        <motion.img
-          className="hnm w-[60%] md:w-[40%] object-contain mx-auto grayscale hover:grayscale-0 duration-300 "
-          src="https://muhammad-haseen-nm.onrender.com/assets/person-BK6dIwOX.jpg"
-          alt="muhammad haseen"
-          // onContextMenu={(e) => e.preventDefault()}
-          // onDragStart={(e) => e.preventDefault()}
-          initial={{ opacity: 0, x: 100 ,rotate:90,scale:.3,y:-50}}
-          whileInView={{ opacity: 1, x: 0 ,rotate:0,scale:1,y:0}}
-          transition={{ duration: 1, delay: 0.5 }}
-        />
+      
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+  )
+}
 
-export default About;
+export default About
