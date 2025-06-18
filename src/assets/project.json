@@ -45,7 +45,7 @@
     "image": "./echomind.png",
     "category": "Service Tools",
     "liveUrl": "https://echomind-ai-six.vercel.app/",
-    "githubUrl": "https://github.com/HASINMMPM/sahachari-center-frontend",
+    "githubUrl": "https://github.com/NizzCorp-Academy/EchoMind_FrontEnd/tree/main",
     "dateCreated": { "$date": { "$numberLong": "1737475234767" } },
     "__v": { "$numberInt": "0" },
     "npm": ["Doxygen", "jwt", "joi", "jest", "vitest","Redux toolkit"],
