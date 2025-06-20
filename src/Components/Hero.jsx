@@ -1,5 +1,6 @@
 import React from 'react'
 import img from "../assets/muhammadHaseen.webp"
+import resume from "../assets/resume Muhammad Haseen.pdf"
 
 const Hero = () => {
   return (
@@ -16,16 +17,16 @@ const Hero = () => {
         </p>
         <div className="flex flex-wrap gap-4">
         
-          <button className="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300 shadow-lg">
+          <a href={resume} target="_blank" className="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300 shadow-lg">
             Download Resume
-          </button>
+          </a>
         </div>
       </div>
       <div className="md:w-1/2 mt-10 md:mt-0 animate-fade-in delay-100 flex justify-center">
         <div className="relative w-64 h-64 md:w-80 md:h-80">
           <div className="absolute w-full h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500 -rotate-12 shadow-xl" />
           <div className="absolute w-full h-full rounded-full overflow-hidden border-4 border-white  shadow-md">
-            {/* Replace with your image */}
+           
             <img
               src={img}
               alt="Profile"
