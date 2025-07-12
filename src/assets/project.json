@@ -42,7 +42,7 @@
     "_id": { "$oid": "678fc4a2e35637e2bc919ec8" },
     "title": "Echomind",
     "description": "Co-developed EchoMind, an AI-powered chatbot designed with Clean Architecture. Worked collaboratively with a UI/UX designer to ensure a seamless user experience. The system features a centralized error handler, a single entry point for all API calls, and is fully tested for stability and maintainability.",
-    "image": "./echomind.web",
+    "image": "./echomind.webp",
     "category": "Service Tools",
     "liveUrl": "https://echomind-ai-six.vercel.app/",
     "githubUrl": "https://github.com/NizzCorp-Academy/EchoMind_FrontEnd/tree/main",
